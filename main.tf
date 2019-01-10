@@ -3,15 +3,15 @@ module "lamp-server" {
 
   hostname                = "lamp"
   domain                  = "ignw.io"
-  vsphere_server          = "172.20.1.5"
-  vsphere_datacenter      = "pod1-hx-dc"
-  vsphere_datastore       = "Primary"
-  vsphere_compute_cluster = "pod1-hx"
-  vsphere_network         = "vm-network-40"
-  disk_template           = "ubuntu1604_template_packer"
+  vsphere_server          = "10.254.252.5"
+  vsphere_datacenter      = "POC-Lab"
+  vsphere_datastore       = "IGNW-POC"
+  vsphere_compute_cluster = "POC"
+  vsphere_network         = "ignw-poc|vesta-devops|servers"
+  disk_template           = "CentOS7_base_template"
   num_cpus                = 2
   memory_mb               = 4000
-  root_volume_size        = 50
+  root_volume_size        = 20
   vsphere_user            = "administrator@vsphere.local"
   vsphere_password        = "${var.vsphere_password}"
   terraform_password      = "${var.terraform_password}"
