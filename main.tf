@@ -15,5 +15,5 @@ module "lamp-server" {
   vsphere_user            = "administrator@vsphere.local"
   vsphere_password        = "${var.vsphere_password}"
   ssh_user                = "adminuser"
-  terraform_password      = "${var.terraform_password}"
+  ssh_password      = "${var.terraform_password}"
 }
