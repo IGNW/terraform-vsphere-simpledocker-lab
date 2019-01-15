@@ -1,7 +1,7 @@
 module "lamp-server" {
   source                  = "github.com/IGNW/terraform-vsphere-lamp"
 
-  hostname                = "lamp2"
+  hostname                = "lamp"
   domain                  = "ignw.io"
   vsphere_server          = "10.254.252.5"
   vsphere_datacenter      = "POC-Lab"
@@ -14,5 +14,6 @@ module "lamp-server" {
   root_volume_size        = 20
   vsphere_user            = "administrator@vsphere.local"
   vsphere_password        = "${var.vsphere_password}"
+  ssh_user                = "adminuser"
   terraform_password      = "${var.terraform_password}"
 }
