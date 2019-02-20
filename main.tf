@@ -1,5 +1,5 @@
 module "lamp-server" {
-  source                  = "github.com/IGNW/terraform-vsphere-simple"
+  source                  = "github.com/IGNW/terraform-vsphere-simple?ref=iptest"
 
   hostname                = "docker-test"
   domain                  = "ignw.io"
@@ -8,7 +8,7 @@ module "lamp-server" {
   vsphere_datastore       = "IGNW-POC"
   vsphere_compute_cluster = "POC"
   vsphere_network         = "ignw-poc|vesta-devops|servers"
-  disk_template           = "ubuntu1604_dockeree_template"
+  disk_template           = "centos7_template_dockeree"
   num_cpus                = 2
   memory_mb               = 4000
   root_volume_size        = 20
